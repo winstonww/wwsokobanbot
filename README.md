@@ -25,7 +25,7 @@ In konig alogrithm, one need to find the maximum matching of the bpg first, then
 My implmentation uses a flow network of maximum matching, and bfs to find alternating neighbors.
 
 
-### Pruning in valid states ###
+### Pruning invalid states ###
 
 <img src="https://github.com/winstonww/wwsokobanbot/blob/master/corner.png" width="400" align="center">
 Some states that will never lead agent to the goal thus should be pruned. 
