@@ -7,9 +7,9 @@ Here are some optimizations on the heuristics that I have done to make the AI sm
 
 ### Hugarian Algoirthm ###
 
-Finding the manhattan distance of each box to the storage with minimum distance is not a good heuristic. This 
+Finding the manhattan distance of each box to its nearest storage with replacement is not a good heuristic. This 
 is because each storage can contain only 1 box, so need to use hungarian alogirthm to find the optimal state. 
-This youtube video offers an simple explanation of hungarian algorithm: https://www.youtube.com/watch?v=cQ5MsiGaDY8
+This youtube video offers a simple explanation of hungarian algorithm: https://www.youtube.com/watch?v=cQ5MsiGaDY8
 
 The first 2 steps of preforming row and column reduction are relatively straight-forward to implement, for 
 we just need to decrement the matrix the minimum entry in each row/col.
@@ -40,4 +40,4 @@ To find boxes that are permanently cornered and mark the possible boxes that if 
 other boxes to be permanently cornered, we can use DFS. We use BFS to find boxes that are not reachable by robots.
 
 ### Caching ### 
-It's useful to cache the calculation of the heuristic, especially when none of the boxes moved in a round.
+It's useful to cache the heuristic to eliminate the extra computation needed when none of the boxes have moved changed in the previous turn. 
