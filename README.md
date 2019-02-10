@@ -27,7 +27,7 @@ My implmentation uses a flow network of maximum matching, and bfs to find altern
 
 ### Pruning in valid states ###
 
-![corner](https://github.com/winstonww/wwsokobanbot/blob/master/corner.png | width=250)
+<img src="https://github.com/winstonww/wwsokobanbot/blob/master/corner.png" width="200">
 Some states that will never lead agent to the goal thus should be pruned. 
 For instance, when a box is pushed into some corner that is not a storage area, it is impossible to reach a solution 
 in this case. Set these states to have max value. When a box is pushed into a "box corner" formed by one or 
