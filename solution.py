@@ -65,19 +65,6 @@ def find_total_dist(boxes, storage):
         total += m
     return total
 
-def find_dist_util_with_replacement(boxes, storages):
-    # backtracking to find minimum total distances
-    if not boxes: return 0
-    b = list(boxes)
-    s = list(storages)
-    min_d = None
-    for i,_ in enumerate(boxes):
-        n_boxes = b[:i]+b[i+1:]
-        for j,_ in enumerate(storages):
-            n_storages = s[:j]+s[j+1:]
-            d = dist(b[i],s[j]) + find_dist_util_with_replacement(n_boxes, n_storages)
-            if not min_d or min_d > d: min_d = d
-    return min_d
 
 #SOKOBAN HEURISTICS
 def trivial_heuristic(state):
