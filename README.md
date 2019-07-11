@@ -18,8 +18,8 @@ In step 3 and 4, we need to find the minimum number of lines to cover all the ze
 algorithm, which is detailed here: https://en.wikipedia.org/wiki/Kőnig%27s_theorem_(graph_theory).
 
 We can simply put konig algorithm as follows: If we represent row indices as a set of vertices connected to another
-set of vertices representing column matrices, and add an edge for each zero-entry in the bipartite graph,
-then we can see that the minimum vertex cover represents the lines we need to cover all zero!
+set of vertices representing column indices, and add an edge for each zero-entry in the bipartite graph,
+then we can see that the minimum vertex cover represents the lines we need to cover all zeros!
 
 In konig alogrithm, one need to find the maximum matching of the bpg first, then add alternating neighbors to the set.
 My implmentation uses a flow network of maximum matching, and bfs to find alternating neighbors.
